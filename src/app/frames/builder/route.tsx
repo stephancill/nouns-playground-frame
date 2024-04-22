@@ -1,6 +1,6 @@
 import { getRandomNounSeed } from "@nouns/assets";
 import { Button } from "frames.js/next";
-import { nounImageUrl, renderNounDataUrl } from "../../utils";
+import { nounImageUrl } from "../../utils";
 import { frames } from "../frames";
 
 export const POST = frames(async (ctx) => {
@@ -58,7 +58,14 @@ export const POST = frames(async (ctx) => {
   ];
 
   return {
-    image: <img src={nounUrl} />,
+    image: (
+      <div tw="flex relative">
+        <img src={nounUrl} />
+        <div tw="absolute w-full justify-center mt-2 text-[48px]">
+          Nouns Playground
+        </div>
+      </div>
+    ),
     imageOptions: {
       aspectRatio: "1:1",
     },

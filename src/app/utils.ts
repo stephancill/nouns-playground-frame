@@ -22,14 +22,9 @@ export function renderNounSvg(
 ) {
   const { parts, background } = getNounData(seed);
 
-  console.log(
-    "bg",
-    options.background === "none" ? undefined : options.background || background
-  );
-
   const { palette } = ImageData;
   return buildSVG(
-    parts,
+    parts.filter(Boolean),
     palette,
     options.background === "none" ? undefined : options.background || background
   );

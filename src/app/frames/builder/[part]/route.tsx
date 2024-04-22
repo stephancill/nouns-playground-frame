@@ -76,6 +76,10 @@ export const POST = async (
             <img src={nextSeedImgData} tw="w-28 h-28" />
             <div tw="text-[15px] justify-center text-center w-full">Next</div>
           </div>
+          <div tw="absolute w-full justify-center mt-2 text-[48px] flex">
+            {part[0].toUpperCase()}
+            {part.slice(1)}
+          </div>
         </div>
       ),
       imageOptions: {

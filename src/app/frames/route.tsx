@@ -12,7 +12,9 @@ const frameHandler = frames(async (ctx) => {
     image: (
       <div tw="flex relative">
         <img src={nounUrl} />
-        <div tw="absolute w-full justify-center mt-2">Nouns Playground</div>
+        <div tw="absolute w-full justify-center mt-2 text-[48px]">
+          Nouns Playground
+        </div>
       </div>
     ),
     imageOptions: {
